@@ -19,7 +19,8 @@ class hexa:
 
     def hex_decode(self, data):
 
-        return data
+        string = data.replace("\\x", "")
+        return bytes.fromhex(string).decode('utf-8')
 
     def __init__(self):
 
